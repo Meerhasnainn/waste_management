@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare LGAs - NSW Waste Management</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>NSW Waste Management</h1>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Overview</a>
+                <a href="/level2" class="nav-link active">Compare LGAs</a>
+                <a href="/level3" class="nav-link">Find Similar LGAs</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="comparison-controls">
+            <h2>Compare LGA Waste Management (2019-2020)</h2>
+            <div class="control-grid">
+                <div class="control-group">
+                    <label for="lga-select">Select LGAs</label>
+                    <select id="lga-select" multiple size="5">
+                        <!-- Will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="waste-type">Waste Resource Type</label>
+                    <select id="waste-type">
+                        <option value="recyclable">Recyclable</option>
+                        <option value="organics">Organics</option>
+                        <option value="waste">Waste</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="waste-subtypes">Waste Resource Subtypes</label>
+                    <select id="waste-subtypes" multiple size="5">
+                        <!-- Will be populated by JavaScript based on waste type -->
+                    </select>
+                </div>
+            </div>
+            <button id="compare-btn" class="feature-link">Compare Selected LGAs</button>
+        </section>
+
+        <section class="comparison-results">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th data-sort="lga">LGA ↕</th>
+                        <th data-sort="population">Population ↕</th>
+                        <th data-sort="houses">Houses Surveyed ↕</th>
+                        <th data-sort="collected">Total Collected ↕</th>
+                        <th data-sort="recycled">Total Recycled ↕</th>
+                        <th data-sort="percentage">% Recycled ↕</th>
+                        <th data-sort="average">Avg. per Household ↕</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>NSW Domestic Waste Management and Recycling Dashboard</p>
+    </footer>
+
+    <script src="/static/js/level2.js"></script>
+</body>
+</html>

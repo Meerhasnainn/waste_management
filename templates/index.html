@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSW Waste Management</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>NSW Waste Management</h1>
+            <div class="nav-links">
+                <a href="/" class="nav-link active">Overview</a>
+                <a href="/level2" class="nav-link">Compare LGAs</a>
+                <a href="/level3" class="nav-link">Find Similar LGAs</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Level 1 (GREEN) Content -->
+        <section class="hero-section">
+            <h2>NSW Domestic Waste Management & Recycling</h2>
+            <p>Explore comprehensive data on waste management across New South Wales</p>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stats-card" id="stats-2018">
+                    <h3>2018-2019 Period</h3>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <span class="stat-value" id="lgas-2018">Loading...</span>
+                            <span class="stat-label">Total LGAs</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="houses-2018">Loading...</span>
+                            <span class="stat-label">Houses Surveyed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card" id="stats-2019">
+                    <h3>2019-2020 Period</h3>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <span class="stat-value" id="lgas-2019">Loading...</span>
+                            <span class="stat-label">Total LGAs</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="houses-2019">Loading...</span>
+                            <span class="stat-label">Houses Surveyed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Compare LGAs</h3>
+                    <p>Analyze and compare waste management performance across different Local Government Areas</p>
+                    <a href="/level2" class="feature-link">Explore</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Track Progress</h3>
+                    <p>Monitor recycling rates and waste management improvements over time</p>
+                    <a href="/level2" class="feature-link">View Stats</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Find Similar LGAs</h3>
+                    <p>Discover LGAs with similar recycling patterns and performance</p>
+                    <a href="/level3" class="feature-link">Compare</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>NSW Domestic Waste Management and Recycling Dashboard</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

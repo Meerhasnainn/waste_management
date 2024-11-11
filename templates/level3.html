@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Similar LGAs - NSW Waste Management</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>NSW Waste Management</h1>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Overview</a>
+                <a href="/level2" class="nav-link">Compare LGAs</a>
+                <a href="/level3" class="nav-link active">Find Similar LGAs</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="similarity-controls">
+            <h2>Find Similar LGAs</h2>
+            <div class="control-grid">
+                <div class="control-group">
+                    <label for="base-lga">Select Base LGA</label>
+                    <select id="base-lga">
+                        <!-- Will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="waste-type">Waste Resource Type</label>
+                    <select id="waste-type">
+                        <option value="recyclable">Recyclable</option>
+                        <option value="organics">Organics</option>
+                        <option value="waste">Waste</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="period">Time Period</label>
+                    <select id="period">
+                        <option value="2019">2019-2020</option>
+                        <option value="2018">2018-2019</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="cutoff">Number of Similar LGAs</label>
+                    <input type="number" id="cutoff" value="10" min="1" max="50">
+                </div>
+            </div>
+            <button id="find-similar-btn" class="feature-link">Find Similar LGAs</button>
+        </section>
+
+        <section class="similarity-results" id="results-container">
+            <!-- Will be populated by JavaScript with similarity cards -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>NSW Domestic Waste Management and Recycling Dashboard</p>
+    </footer>
+
+    <script src="/static/js/level3.js"></script>
+</body>
+</html>
